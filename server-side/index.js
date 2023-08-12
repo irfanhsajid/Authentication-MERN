@@ -13,11 +13,13 @@ app.use(express.json());
 //setup cors policy 
 app.use(cors(
 {
-  origin:["https://mern-auth-frontend-ihs.netlify.app/"], //frontend link setup 
+  origin:["https://mern-auth-frontend-ihs.netlify.app"], //frontend link setup 
   methods:["POST", "GET"], //methods we will use to interact with the database
   credentials:true
 }
 ))
+
+app.use(express.json());
 
 //conecting the mongodb atlas
 mongoose.connect("mongodb+srv://auth-mern:auth1235@cluster0.vaopm.mongodb.net/auth-mern?retryWrites=true&w=majority")

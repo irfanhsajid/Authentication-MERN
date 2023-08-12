@@ -9,6 +9,6 @@ const authenticationSchema = new mongoose.Schema(
         password:String,
     }
 )
-const authenticationModel = mongoose.model("person",authenticationSchema);
+const authenticationModel = mongoose.model("people",authenticationSchema);
 
 module.exports = authenticationModel;

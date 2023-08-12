@@ -17,15 +17,14 @@ import './Signup.css';
 //setting up the cors policy 
 axios.defaults.withCredentials =true;
 const handleSubmit =(e)=>{
- 
 e.preventDefault();
   //.......fetching data from the server side using axios.......
-  axios.post('http://localhost:3000/register', {name,email,password})
+  axios.post('https://auth-mern-api.vercel.app/register', {name,email,password})
  .then(result =>(
   console.log(result),
   navigate('/login')
  ))
-  .catch((err)=>console.log(err))
+.catch((err)=>console.log(err))
  
   // Clear the input fields using refs
   nameRef.current.value = '';
